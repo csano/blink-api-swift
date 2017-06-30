@@ -61,6 +61,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2612866B1F061CD500036AD6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2612865C1F04D9D900036AD6 /* network.swift */,
+				261286631F04DC6800036AD6 /* authToken.swift */,
+				261286671F04DD1600036AD6 /* authResponse.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		26A4998F1EEC90DB0082B3D1 = {
 			isa = PBXGroup;
 			children = (
@@ -82,11 +92,9 @@
 		26A4999B1EEC90DB0082B3D1 /* blinkapi */ = {
 			isa = PBXGroup;
 			children = (
+				2612866B1F061CD500036AD6 /* Data */,
 				26A4999C1EEC90DB0082B3D1 /* blinkapi.h */,
 				26A4999D1EEC90DB0082B3D1 /* Info.plist */,
-				2612865C1F04D9D900036AD6 /* network.swift */,
-				261286631F04DC6800036AD6 /* authToken.swift */,
-				261286671F04DD1600036AD6 /* authResponse.swift */,
 			);
 			path = blinkapi;
 			sourceTree = "<group>";
