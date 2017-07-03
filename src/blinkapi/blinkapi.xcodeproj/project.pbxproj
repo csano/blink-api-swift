@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260984231F07854D0098F9AD /* blinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260984221F07854D0098F9AD /* blinkService.swift */; };
+		260984251F07863D0098F9AD /* blinkAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260984241F07863D0098F9AD /* blinkAccount.swift */; };
 		2612865D1F04D9D900036AD6 /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2612865C1F04D9D900036AD6 /* network.swift */; };
 		2612865F1F04DA1B00036AD6 /* networkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2612865E1F04DA1B00036AD6 /* networkTests.swift */; };
 		261286601F04DB2700036AD6 /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2612865C1F04D9D900036AD6 /* network.swift */; };
@@ -15,7 +17,6 @@
 		261286681F04DD1600036AD6 /* authResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261286671F04DD1600036AD6 /* authResponse.swift */; };
 		2612866A1F04E77000036AD6 /* authResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261286691F04E77000036AD6 /* authResponseTests.swift */; };
 		26A499A31EEC90DB0082B3D1 /* blinkapi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A499991EEC90DB0082B3D1 /* blinkapi.framework */; };
-		26A499AA1EEC90DB0082B3D1 /* blinkapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 26A4999C1EEC90DB0082B3D1 /* blinkapi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		260984221F07854D0098F9AD /* blinkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = blinkService.swift; sourceTree = "<group>"; };
+		260984241F07863D0098F9AD /* blinkAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = blinkAccount.swift; sourceTree = "<group>"; };
 		2612865C1F04D9D900036AD6 /* network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = network.swift; sourceTree = "<group>"; };
 		2612865E1F04DA1B00036AD6 /* networkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = networkTests.swift; sourceTree = "<group>"; };
 		261286631F04DC6800036AD6 /* authToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = authToken.swift; sourceTree = "<group>"; };
@@ -36,7 +39,6 @@
 		261286671F04DD1600036AD6 /* authResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = authResponse.swift; sourceTree = "<group>"; };
 		261286691F04E77000036AD6 /* authResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = authResponseTests.swift; sourceTree = "<group>"; };
 		26A499991EEC90DB0082B3D1 /* blinkapi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = blinkapi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		26A4999C1EEC90DB0082B3D1 /* blinkapi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blinkapi.h; sourceTree = "<group>"; };
 		26A4999D1EEC90DB0082B3D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26A499A21EEC90DB0082B3D1 /* blinkapiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blinkapiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A499A91EEC90DB0082B3D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				2612865C1F04D9D900036AD6 /* network.swift */,
 				261286631F04DC6800036AD6 /* authToken.swift */,
 				261286671F04DD1600036AD6 /* authResponse.swift */,
+				260984241F07863D0098F9AD /* blinkAccount.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -92,8 +95,8 @@
 		26A4999B1EEC90DB0082B3D1 /* blinkapi */ = {
 			isa = PBXGroup;
 			children = (
+				260984221F07854D0098F9AD /* blinkService.swift */,
 				2612866B1F061CD500036AD6 /* Data */,
-				26A4999C1EEC90DB0082B3D1 /* blinkapi.h */,
 				26A4999D1EEC90DB0082B3D1 /* Info.plist */,
 			);
 			path = blinkapi;
@@ -117,7 +120,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26A499AA1EEC90DB0082B3D1 /* blinkapi.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +184,7 @@
 				};
 			};
 			buildConfigurationList = 26A499931EEC90DB0082B3D1 /* Build configuration list for PBXProject "blinkapi" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -223,6 +225,8 @@
 			files = (
 				2612865D1F04D9D900036AD6 /* network.swift in Sources */,
 				261286681F04DD1600036AD6 /* authResponse.swift in Sources */,
+				260984251F07863D0098F9AD /* blinkAccount.swift in Sources */,
+				260984231F07854D0098F9AD /* blinkService.swift in Sources */,
 				261286641F04DC6800036AD6 /* authToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +352,7 @@
 		26A499AE1EEC90DB0082B3D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -359,6 +364,7 @@
 				INFOPLIST_FILE = blinkapi/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chrissano.blinkapi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -370,6 +376,7 @@
 		26A499AF1EEC90DB0082B3D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -381,6 +388,7 @@
 				INFOPLIST_FILE = blinkapi/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chrissano.blinkapi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

@@ -1,5 +1,5 @@
 
-extension AuthResponse {
+public extension AuthResponse {
     init?(json: [String:Any]) {
         guard let authToken = json["authtoken"] as? [String: String],
             let networks = json["networks"] as? [String: [String: Any]]
@@ -16,7 +16,7 @@ extension AuthResponse {
     }
 }
 
-struct AuthResponse {
-    var networks: [Network]
-    let authToken: AuthToken
+public struct AuthResponse {
+    public var networks: [Network]
+    public let authToken: AuthToken
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-class AuthToken {
+public class AuthToken {
     init(token: String) {
         self.token = token
     }
