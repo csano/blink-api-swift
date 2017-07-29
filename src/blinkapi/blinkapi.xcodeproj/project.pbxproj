@@ -17,6 +17,7 @@
 		261286681F04DD1600036AD6 /* authResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261286671F04DD1600036AD6 /* authResponse.swift */; };
 		2612866A1F04E77000036AD6 /* authResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261286691F04E77000036AD6 /* authResponseTests.swift */; };
 		26A499A31EEC90DB0082B3D1 /* blinkapi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A499991EEC90DB0082B3D1 /* blinkapi.framework */; };
+		26C0EDBB1F0F698600879996 /* loginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C0EDBA1F0F698600879996 /* loginService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		26A4999D1EEC90DB0082B3D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26A499A21EEC90DB0082B3D1 /* blinkapiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blinkapiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A499A91EEC90DB0082B3D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26C0EDBA1F0F698600879996 /* loginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +97,7 @@
 		26A4999B1EEC90DB0082B3D1 /* blinkapi */ = {
 			isa = PBXGroup;
 			children = (
-				260984221F07854D0098F9AD /* blinkService.swift */,
+				26C0EDBC1F0F698D00879996 /* Services */,
 				2612866B1F061CD500036AD6 /* Data */,
 				26A4999D1EEC90DB0082B3D1 /* Info.plist */,
 			);
@@ -111,6 +113,15 @@
 				261286691F04E77000036AD6 /* authResponseTests.swift */,
 			);
 			path = blinkapiTests;
+			sourceTree = "<group>";
+		};
+		26C0EDBC1F0F698D00879996 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				260984221F07854D0098F9AD /* blinkService.swift */,
+				26C0EDBA1F0F698600879996 /* loginService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +239,7 @@
 				260984251F07863D0098F9AD /* blinkAccount.swift in Sources */,
 				260984231F07854D0098F9AD /* blinkService.swift in Sources */,
 				261286641F04DC6800036AD6 /* authToken.swift in Sources */,
+				26C0EDBB1F0F698600879996 /* loginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
