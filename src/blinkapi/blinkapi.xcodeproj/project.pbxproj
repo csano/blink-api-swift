@@ -18,6 +18,7 @@
 		2612866A1F04E77000036AD6 /* authResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261286691F04E77000036AD6 /* authResponseTests.swift */; };
 		26A499A31EEC90DB0082B3D1 /* blinkapi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A499991EEC90DB0082B3D1 /* blinkapi.framework */; };
 		26C0EDBB1F0F698600879996 /* loginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C0EDBA1F0F698600879996 /* loginService.swift */; };
+		26F608DA1F31B8BE00A25BBC /* serviceMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F608D91F31B8BE00A25BBC /* serviceMediator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		26A499A21EEC90DB0082B3D1 /* blinkapiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blinkapiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A499A91EEC90DB0082B3D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26C0EDBA1F0F698600879996 /* loginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginService.swift; sourceTree = "<group>"; };
+		26F608D91F31B8BE00A25BBC /* serviceMediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serviceMediator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				260984221F07854D0098F9AD /* blinkService.swift */,
 				26C0EDBA1F0F698600879996 /* loginService.swift */,
+				26F608D91F31B8BE00A25BBC /* serviceMediator.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F608DA1F31B8BE00A25BBC /* serviceMediator.swift in Sources */,
 				2612865D1F04D9D900036AD6 /* network.swift in Sources */,
 				261286681F04DD1600036AD6 /* authResponse.swift in Sources */,
 				260984251F07863D0098F9AD /* blinkAccount.swift in Sources */,

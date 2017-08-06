@@ -12,3 +12,7 @@ public extension AuthResponse {
 public struct AuthResponse {
     public let authToken: AuthToken
 }
+
+public struct NetworkResponse {
+    public let Network: Network
+}

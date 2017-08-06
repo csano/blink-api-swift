@@ -4,11 +4,10 @@ public class LoginService : BlinkService {
     public override init() {
         
     }
-    func createResponse(json: [String: Any]) -> Void {
-        
-    }
-    public func login(blinkAccount:BlinkAccount, callback:@escaping (AuthResponse?) -> Void) -> Void {
+    public func login(blinkAccount:BlinkAccount, callback: @escaping (AuthResponse) -> Void) -> Void {
         let reqText = ["password": blinkAccount.password, "email" : blinkAccount.email]
-        makeRequest(resource: "login", requestData: reqText, httpMethod: "POST", callback: createResponse)
+        makeRequest(resource: "login", requestData: reqText, httpMethod: "POST", callback: { (data: [String: Any]) -> Void in
+            callback(AuthResponse(json: data)!)
+        })
     }
 }
