@@ -1,5 +1,5 @@
 
-public protocol EventData {
+public protocol EventArgs {
     
 }
 
@@ -8,17 +8,17 @@ public enum Event {
     case Network
 }
 
-public class LoginEventData : EventData {
+public class LoginEventArgs : EventArgs {
     public var s = "Login"
 }
 
-public class NetworkEventData : EventData {
+public class NetworkEventArgs : EventArgs {
     public var s = "Network"
 }
 
-//typealias EventCallback = (eventData: EventData) -> Void
+//typealias EventCallback = (EventArgs: EventArgs) -> Void
 
-public typealias EventCallbackType = (EventData?) -> Void
+public typealias EventCallbackType = (EventArgs?) -> Void
 
 public class EventRegistry {
     // TODO: ObjectIdentifier instead of String?
@@ -44,7 +44,7 @@ public class EventDispatcher {
     init(eventRegistry: EventRegistry) {
         self.eventRegistry = eventRegistry
     }
-    func dispatch(event: Event, data: EventData) {
+    func dispatch(event: Event, data: EventArgs) {
         for callback in eventRegistry[event] {
             callback(data)
         }
@@ -52,9 +52,9 @@ public class EventDispatcher {
 }
 
 
-public final class EventCallback<T: EventData> {
-    func execute(eventData: Any?) -> Void {
-        if let castData = eventData as? T {
+public final class EventCallback<T: EventArgs> {
+    func execute(EventArgs: Any?) -> Void {
+        if let castData = EventArgs as? T {
             self.callback(castData)
         }
     }
