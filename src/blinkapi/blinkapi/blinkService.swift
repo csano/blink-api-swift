@@ -16,14 +16,17 @@ public class BlinkService {
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         return request
     }
+    
+    func createRequestDataWithBlinkAccount(blinkAccount: BlinkAccount) -> [String: Any] {
+        return ["password": blinkAccount.password, "email" : blinkAccount.email]
+    }
         
-    public func makeRequest(resource: String, requestData: [String: Any], httpMethod: String, callback: @escaping ([String: Any]) -> Void) -> Void {
-        let url = createRequestUrl(resource: resource)
+    public func makeRequest(url: URL, requestData: [String: Any], httpMethod: String, callback: @escaping ([String: Any]) -> Void) -> Void {
         let data = try? JSONSerialization.data(withJSONObject: requestData)
         
         let session = URLSession(configuration: URLSessionConfiguration.default)
         
-        let request = createRequest(url:url!, httpMethod:httpMethod, data:data)
+        let request = createRequest(url: url, httpMethod:httpMethod, data:data)
         
         session.dataTask(with: request, completionHandler: { (data, response, error) in
             if let data = data {

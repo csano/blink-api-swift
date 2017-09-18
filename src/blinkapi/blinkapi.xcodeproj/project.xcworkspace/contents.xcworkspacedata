@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:blinkapi.xcodeproj">
+      location = "group:../../../../blink-api.playground">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

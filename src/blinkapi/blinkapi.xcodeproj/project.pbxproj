@@ -19,6 +19,7 @@
 		26A499A31EEC90DB0082B3D1 /* blinkapi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A499991EEC90DB0082B3D1 /* blinkapi.framework */; };
 		26C0EDBB1F0F698600879996 /* loginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C0EDBA1F0F698600879996 /* loginService.swift */; };
 		26F608DA1F31B8BE00A25BBC /* serviceMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F608D91F31B8BE00A25BBC /* serviceMediator.swift */; };
+		26F688A41F664EB2005AF3BB /* camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688A31F664EB2005AF3BB /* camera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		26A499A91EEC90DB0082B3D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26C0EDBA1F0F698600879996 /* loginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginService.swift; sourceTree = "<group>"; };
 		26F608D91F31B8BE00A25BBC /* serviceMediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serviceMediator.swift; sourceTree = "<group>"; };
+		26F688A31F664EB2005AF3BB /* camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = camera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		2612866B1F061CD500036AD6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				26F688A31F664EB2005AF3BB /* camera.swift */,
 				2612865C1F04D9D900036AD6 /* network.swift */,
 				261286631F04DC6800036AD6 /* authToken.swift */,
 				261286671F04DD1600036AD6 /* authResponse.swift */,
@@ -237,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F688A41F664EB2005AF3BB /* camera.swift in Sources */,
 				26F608DA1F31B8BE00A25BBC /* serviceMediator.swift in Sources */,
 				2612865D1F04D9D900036AD6 /* network.swift in Sources */,
 				261286681F04DD1600036AD6 /* authResponse.swift in Sources */,
