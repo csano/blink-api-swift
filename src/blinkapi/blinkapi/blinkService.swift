@@ -6,7 +6,7 @@ public class BlinkService {
     static let baseUrl = "https://prod.immedia-semi.com/"
     
     func createRequestUrl(resource: String) -> URL! {
-        return NSURL(fileURLWithPath: BlinkService.baseUrl).appendingPathComponent(resource)
+        return URL(string: BlinkService.baseUrl)!.appendingPathComponent(resource)
     }
     
     func createRequest(url: URL!, httpMethod: String, data: Data?) -> URLRequest {
@@ -21,23 +21,23 @@ public class BlinkService {
         return ["password": blinkAccount.password, "email" : blinkAccount.email]
     }
         
-    public func makeRequest(url: URL, requestData: [String: Any], httpMethod: String, callback: @escaping ([String: Any]) -> Void) -> Void {
-        let data = try? JSONSerialization.data(withJSONObject: requestData)
-        
+    // should take request object instead of data
+    public func makeRequest(request: URLRequest, callback: @escaping ([String: Any]) -> Void) -> Void {
         let session = URLSession(configuration: URLSessionConfiguration.default)
-        
-        let request = createRequest(url: url, httpMethod:httpMethod, data:data)
-        
+
         session.dataTask(with: request, completionHandler: { (data, response, error) in
-            if let data = data {
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                    callback(json)
-                } catch {
-                    callback([:])
+            if (error != nil) {
+                // TODO
+            } else {
+                if let data = data {
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                        callback(json)
+                    } catch let e as Error {
+                        callback([:])
+                    }
                 }
             }
-            
         }).resume()
     }
 }

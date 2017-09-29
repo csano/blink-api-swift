@@ -13,14 +13,20 @@ public struct AuthResponse {
     public let authToken: AuthToken
 }
 
-public struct NetworkResponse {
-    public let Network: Network
-}
-
 public struct NetworkCamerasResponse {
     public let cameras: [Camera]
 }
 
+
+public struct NetworkResponse {
+    public let networks: [Network]
+}
+
+public extension NetworkResponse {
+    init?(json: [String:Any]) {
+        networks = []
+    }
+}
 
 public extension NetworkCamerasResponse {
     init?(json: [String:Any]) {

@@ -5,7 +5,12 @@ public class LoginService : BlinkService {
     }
     public func login(blinkAccount:BlinkAccount, callback: @escaping (AuthResponse) -> Void) -> Void {
         let reqText = createRequestDataWithBlinkAccount(blinkAccount: blinkAccount)
-        makeRequest(url: createRequestUrl(resource: "login"), requestData: reqText, httpMethod: "POST", callback: { (data: [String: Any]) -> Void in
+        
+        let data = try? JSONSerialization.data(withJSONObject: reqText)
+                
+        let request = createRequest(url: createRequestUrl(resource: "login"), httpMethod:"POST", data:data)
+        
+        makeRequest(request: request, callback: { (data: [String: Any]) -> Void in
             callback(AuthResponse(json: data)!)
         })
     }
@@ -14,17 +19,39 @@ public class LoginService : BlinkService {
 public class NetworkService: BlinkService {
     public override init() {
     }
-    
-    func createNetworkRequestUrl(networkId: Int, collection: String) -> URL! {
-        return createRequestUrl(resource: "network").appendingPathComponent(String(networkId)).appendingPathComponent(collection)
+
+    func createNetworksRequestUrl() -> URL! {
+        return createRequestUrl(resource: "networks")
     }
     
-    public func getCameras(blinkAccount:BlinkAccount, network: Network, callback: @escaping (NetworkCamerasResponse) -> Void) -> Void {
-        let reqText = createRequestDataWithBlinkAccount(blinkAccount: blinkAccount)
-        makeRequest(url:createNetworkRequestUrl(networkId: network.id, collection: "cameras"), requestData: reqText, httpMethod: "POST", callback: { (data: [String: Any]) -> Void in
-            callback(NetworkCamerasResponse(json: data)!)
+    func createNetworkRequestUrl(_ networkId: Int) -> URL! {
+        return createRequestUrl(resource: "network").appendingPathComponent(String(networkId))
+    }
+
+    func createNetworkCollectionRequestUrl(networkId: Int, collection: String) -> URL! {
+        return createNetworkRequestUrl(networkId).appendingPathComponent(collection)
+    }
+
+    
+    func test(data: [String:Any]) -> Void {
+        
+    }
+    
+    public func getNetworks(authToken: AuthToken, callback: @escaping (NetworkResponse) -> Void) -> Void {
+        var request = createRequest(url: createNetworksRequestUrl(), httpMethod: "GET", data: nil)
+        request.setValue(authToken.token, forHTTPHeaderField: "TOKEN_AUTH")
+        
+        makeRequest(request: request,  callback: { (data: [String: Any]) -> Void in
+            callback(NetworkResponse(json: data)!)
         })
     }
+    
+//    public func getCameras(authToken: AuthToken, network: Network, callback: @escaping (NetworkCamerasResponse) -> Void) -> Void {
+//        let requestData = createRequestDataWithAuthToken(authToken: authToken);
+//        makeRequest(url:createNetworkCollectionRequestUrl(networkId: network.id, collection: "cameras"), requestData: requestData, httpMethod: "GET", callback: { (data: [String: Any]) -> Void in
+//            callback(NetworkCamerasResponse(json: data)!)
+//        })
+//    }
     
     
 }
