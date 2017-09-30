@@ -31,11 +31,6 @@ public class NetworkService: BlinkService {
     func createNetworkCollectionRequestUrl(networkId: Int, collection: String) -> URL! {
         return createNetworkRequestUrl(networkId).appendingPathComponent(collection)
     }
-
-    
-    func test(data: [String:Any]) -> Void {
-        
-    }
     
     public func getNetworks(authToken: AuthToken, callback: @escaping (NetworkResponse) -> Void) -> Void {
         var request = createRequest(url: createNetworksRequestUrl(), httpMethod: "GET", data: nil)
