@@ -13,38 +13,5 @@ public struct AuthResponse {
     public let authToken: AuthToken
 }
 
-public struct NetworkCamerasResponse {
-    public var cameras: [Camera]
-}
-
-
-public struct NetworkResponse {
-    public var networks: [Network]
-}
-
-public extension NetworkResponse {
-    init?(json: [String:Any]) {
-        networks = []
-        guard let data = json["networks"] as? [[String: Any]] else {
-            return nil
-        }
-        for networkJson in data {
-            networks.append(Network(json: networkJson)!)
-        }
-    }
-}
-
-public extension NetworkCamerasResponse {
-    init?(json: [String:Any]) {
-        cameras = []
-        guard let data = json["devicestatus"] as? [[String: Any]] else {
-            return nil
-        }
-        for cameraJson in data {
-            cameras.append(Camera(json: cameraJson)!)
-        }
-    }
-}
-
 
 

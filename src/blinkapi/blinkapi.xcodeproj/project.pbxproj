@@ -20,6 +20,10 @@
 		26C0EDBB1F0F698600879996 /* loginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C0EDBA1F0F698600879996 /* loginService.swift */; };
 		26F608DA1F31B8BE00A25BBC /* serviceMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F608D91F31B8BE00A25BBC /* serviceMediator.swift */; };
 		26F688A41F664EB2005AF3BB /* camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688A31F664EB2005AF3BB /* camera.swift */; };
+		26F688D81F82D11D005AF3BB /* networkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688D71F82D11D005AF3BB /* networkService.swift */; };
+		26F688DA1F82D26F005AF3BB /* networkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688D91F82D26F005AF3BB /* networkResponse.swift */; };
+		26F688DC1F82D295005AF3BB /* jsonHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688DB1F82D295005AF3BB /* jsonHelpers.swift */; };
+		26F688DE1F82D2BC005AF3BB /* networkCamerasResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688DD1F82D2BC005AF3BB /* networkCamerasResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		26C0EDBA1F0F698600879996 /* loginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginService.swift; sourceTree = "<group>"; };
 		26F608D91F31B8BE00A25BBC /* serviceMediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serviceMediator.swift; sourceTree = "<group>"; };
 		26F688A31F664EB2005AF3BB /* camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = camera.swift; sourceTree = "<group>"; };
+		26F688D71F82D11D005AF3BB /* networkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = networkService.swift; sourceTree = "<group>"; };
+		26F688D91F82D26F005AF3BB /* networkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = networkResponse.swift; sourceTree = "<group>"; };
+		26F688DB1F82D295005AF3BB /* jsonHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jsonHelpers.swift; sourceTree = "<group>"; };
+		26F688DD1F82D2BC005AF3BB /* networkCamerasResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = networkCamerasResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,8 @@
 				261286631F04DC6800036AD6 /* authToken.swift */,
 				261286671F04DD1600036AD6 /* authResponse.swift */,
 				260984241F07863D0098F9AD /* blinkAccount.swift */,
+				26F688D91F82D26F005AF3BB /* networkResponse.swift */,
+				26F688DD1F82D2BC005AF3BB /* networkCamerasResponse.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -105,6 +115,7 @@
 				26C0EDBC1F0F698D00879996 /* Services */,
 				2612866B1F061CD500036AD6 /* Data */,
 				26A4999D1EEC90DB0082B3D1 /* Info.plist */,
+				26F688DB1F82D295005AF3BB /* jsonHelpers.swift */,
 			);
 			path = blinkapi;
 			sourceTree = "<group>";
@@ -126,6 +137,7 @@
 				260984221F07854D0098F9AD /* blinkService.swift */,
 				26C0EDBA1F0F698600879996 /* loginService.swift */,
 				26F608D91F31B8BE00A25BBC /* serviceMediator.swift */,
+				26F688D71F82D11D005AF3BB /* networkService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -241,10 +253,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				26F688A41F664EB2005AF3BB /* camera.swift in Sources */,
+				26F688DA1F82D26F005AF3BB /* networkResponse.swift in Sources */,
 				26F608DA1F31B8BE00A25BBC /* serviceMediator.swift in Sources */,
 				2612865D1F04D9D900036AD6 /* network.swift in Sources */,
 				261286681F04DD1600036AD6 /* authResponse.swift in Sources */,
+				26F688D81F82D11D005AF3BB /* networkService.swift in Sources */,
+				26F688DC1F82D295005AF3BB /* jsonHelpers.swift in Sources */,
 				260984251F07863D0098F9AD /* blinkAccount.swift in Sources */,
+				26F688DE1F82D2BC005AF3BB /* networkCamerasResponse.swift in Sources */,
 				260984231F07854D0098F9AD /* blinkService.swift in Sources */,
 				261286641F04DC6800036AD6 /* authToken.swift in Sources */,
 				26C0EDBB1F0F698600879996 /* loginService.swift in Sources */,

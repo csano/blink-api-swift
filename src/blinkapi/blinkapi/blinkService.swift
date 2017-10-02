@@ -1,12 +1,13 @@
 
 import Foundation
 
-public class BlinkService {
+let BLINK_API_BASE_URI = "https://prod.immedia-semi.com/"
 
-    static let baseUrl = "https://prod.immedia-semi.com/"
+
+public class BlinkProxy {
     
     func createRequestUrl(resource: String) -> URL! {
-        return URL(string: BlinkService.baseUrl)!.appendingPathComponent(resource)
+        return URL(string: BLINK_API_BASE_URI)!.appendingPathComponent(resource)
     }
     
     func createRequest(url: URL!, httpMethod: String, data: Data?) -> URLRequest {
@@ -21,12 +22,10 @@ public class BlinkService {
         return createRequest(url: url, httpMethod: "GET", data: nil)
     }
     
-    
     func createRequest(url: URL!, httpMethod: String) -> URLRequest {
         return createRequest(url: url, httpMethod: httpMethod, data: nil)
     }
     
-        
     // should take request object instead of data
     public func makeRequest(request: URLRequest, callback: @escaping ([String: Any]) -> Void) -> Void {
         let session = URLSession(configuration: URLSessionConfiguration.default)

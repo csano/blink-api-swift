@@ -15,17 +15,7 @@ public struct Network {
     public let updatedAt: Date?
 }
 
-func getJsonValue<T>(json: [String: Any], property: String) -> T {
-    return json[property] as! T
-}
-
-func getJsonValueOrDefault<T>(json: [String: Any], property: String, defaultValue: T) -> T {
-    return json[property] as? T ?? defaultValue
-}
-
 public extension Network {
-
-    
     init?(json: [String: Any]) {
         self.accountId = getJsonValueOrDefault(json: json, property: "account_id", defaultValue: 0)
         self.armed = getJsonValueOrDefault(json: json, property: "armed", defaultValue: false)
