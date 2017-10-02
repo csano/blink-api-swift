@@ -24,7 +24,7 @@ public extension Camera {
         self.updatedAt = getJsonValueOrDefault(json: json, property: "updated_at", defaultValue: nil)
         self.batteryState = getJsonValueOrDefault(json: json, property: "battery_state", defaultValue: "")
         self.batteryLastCheckedAt = getJsonValueOrDefault(json: json, property: "battery_check_time", defaultValue: nil)
-        self.thumbnailUrl = getJsonValueOrDefault(json: json, property: "thumbnail", defaultValue: nil)
+        self.thumbnailUrl = getJsonValueOrDefault(json: json, property: "thumbnail", defaultValue: URL(string: "")!)
         self.name = getJsonValue(json: json, property: "name")
     }
 }

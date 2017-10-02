@@ -50,5 +50,4 @@ class NetworkTests: XCTestCase {
         XCTAssertEqual(network.key, "")
         XCTAssertNil(network.updatedAt)
     }
-    
 }
