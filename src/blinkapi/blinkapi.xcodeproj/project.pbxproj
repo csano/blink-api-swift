@@ -26,6 +26,7 @@
 		26F688DE1F82D2BC005AF3BB /* networkCamerasResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688DD1F82D2BC005AF3BB /* networkCamerasResponse.swift */; };
 		26F688E01F82D6D4005AF3BB /* networkResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688DF1F82D6D4005AF3BB /* networkResponseTests.swift */; };
 		26F688E11F82D990005AF3BB /* jsonHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688DB1F82D295005AF3BB /* jsonHelpers.swift */; };
+		26F688E31F82E171005AF3BB /* networkCamerasResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688E21F82E171005AF3BB /* networkCamerasResponseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		26F688DB1F82D295005AF3BB /* jsonHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jsonHelpers.swift; sourceTree = "<group>"; };
 		26F688DD1F82D2BC005AF3BB /* networkCamerasResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = networkCamerasResponse.swift; sourceTree = "<group>"; };
 		26F688DF1F82D6D4005AF3BB /* networkResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = networkResponseTests.swift; sourceTree = "<group>"; };
+		26F688E21F82E171005AF3BB /* networkCamerasResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = networkCamerasResponseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				261286651F04DC8400036AD6 /* authTokenTests.swift */,
 				261286691F04E77000036AD6 /* authResponseTests.swift */,
 				26F688DF1F82D6D4005AF3BB /* networkResponseTests.swift */,
+				26F688E21F82E171005AF3BB /* networkCamerasResponseTests.swift */,
 			);
 			path = blinkapiTests;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				2612865F1F04DA1B00036AD6 /* networkTests.swift in Sources */,
 				261286661F04DC8400036AD6 /* authTokenTests.swift in Sources */,
 				2612866A1F04E77000036AD6 /* authResponseTests.swift in Sources */,
+				26F688E31F82E171005AF3BB /* networkCamerasResponseTests.swift in Sources */,
 				261286601F04DB2700036AD6 /* network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

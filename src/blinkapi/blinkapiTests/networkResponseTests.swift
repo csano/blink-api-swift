@@ -5,7 +5,7 @@ import XCTest
 class NetworkResponseTests: XCTestCase {
     
     func testWithValidJsonWithOneNetwork() {
-        let json : [String:Any] = ["networks": [["name": "networkName", "id": 1, "onboarded": true]]]
+        let json : [String:Any] = ["networks": [["name": "networkName", "id": 1]]]
         let response = NetworkResponse(json: json)!
         
         XCTAssertEqual(response.networks.count, 1)

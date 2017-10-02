@@ -8,7 +8,7 @@ public struct Camera {
     public let temperature: Int
     public let createdAt: Date?
     public let updatedAt: Date?
-    public let thumbnailUrl: URL
+    public let thumbnailUrl: String
     public let batteryState: String
     public let batteryLastCheckedAt: Date?
     public let name: String
@@ -24,7 +24,7 @@ public extension Camera {
         self.updatedAt = getJsonValueOrDefault(json: json, property: "updated_at", defaultValue: nil)
         self.batteryState = getJsonValueOrDefault(json: json, property: "battery_state", defaultValue: "")
         self.batteryLastCheckedAt = getJsonValueOrDefault(json: json, property: "battery_check_time", defaultValue: nil)
-        self.thumbnailUrl = getJsonValueOrDefault(json: json, property: "thumbnail", defaultValue: URL(string: "")!)
+        self.thumbnailUrl = getJsonValueOrDefault(json: json, property: "thumbnail", defaultValue: "")
         self.name = getJsonValue(json: json, property: "name")
     }
 }
