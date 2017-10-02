@@ -3,6 +3,11 @@ import Foundation
 public class LoginService : BlinkService {
     public override init() {
     }
+    
+    func createRequestDataWithBlinkAccount(blinkAccount: BlinkAccount) -> [String: Any] {
+        return ["password": blinkAccount.password, "email" : blinkAccount.email]
+    }
+    
     public func login(blinkAccount:BlinkAccount, callback: @escaping (AuthResponse) -> Void) -> Void {
         let reqText = createRequestDataWithBlinkAccount(blinkAccount: blinkAccount)
         
@@ -33,7 +38,7 @@ public class NetworkService: BlinkService {
     }
     
     public func getNetworks(authToken: AuthToken, callback: @escaping (NetworkResponse) -> Void) -> Void {
-        var request = createRequest(url: createNetworksRequestUrl(), httpMethod: "GET", data: nil)
+        var request = createRequest(url: createNetworksRequestUrl())
         request.setValue(authToken.token, forHTTPHeaderField: "TOKEN_AUTH")
         
         makeRequest(request: request,  callback: { (data: [String: Any]) -> Void in
@@ -41,12 +46,10 @@ public class NetworkService: BlinkService {
         })
     }
     
-//    public func getCameras(authToken: AuthToken, network: Network, callback: @escaping (NetworkCamerasResponse) -> Void) -> Void {
-//        let requestData = createRequestDataWithAuthToken(authToken: authToken);
-//        makeRequest(url:createNetworkCollectionRequestUrl(networkId: network.id, collection: "cameras"), requestData: requestData, httpMethod: "GET", callback: { (data: [String: Any]) -> Void in
-//            callback(NetworkCamerasResponse(json: data)!)
-//        })
-//    }
-    
-    
+    public func getCameras(authToken: AuthToken, network: Network, callback: @escaping (NetworkCamerasResponse) -> Void) -> Void {
+        let request = createRequest(url: createNetworkCollectionRequestUrl(networkId: network.id, collection: "cameras"))
+        makeRequest(request: request, callback: { (data: [String: Any]) -> Void in
+            callback(NetworkCamerasResponse(json: data)!)
+        })
+    }
 }

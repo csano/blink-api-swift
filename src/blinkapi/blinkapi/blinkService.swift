@@ -16,10 +16,16 @@ public class BlinkService {
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         return request
     }
-    
-    func createRequestDataWithBlinkAccount(blinkAccount: BlinkAccount) -> [String: Any] {
-        return ["password": blinkAccount.password, "email" : blinkAccount.email]
+
+    func createRequest(url: URL!) -> URLRequest {
+        return createRequest(url: url, httpMethod: "GET", data: nil)
     }
+    
+    
+    func createRequest(url: URL!, httpMethod: String) -> URLRequest {
+        return createRequest(url: url, httpMethod: httpMethod, data: nil)
+    }
+    
         
     // should take request object instead of data
     public func makeRequest(request: URLRequest, callback: @escaping ([String: Any]) -> Void) -> Void {
@@ -33,7 +39,7 @@ public class BlinkService {
                     do {
                         let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                         callback(json)
-                    } catch let e as Error {
+                    } catch {
                         callback([:])
                     }
                 }

@@ -14,7 +14,7 @@ public struct AuthResponse {
 }
 
 public struct NetworkCamerasResponse {
-    public let cameras: [Camera]
+    public var cameras: [Camera]
 }
 
 
@@ -36,12 +36,13 @@ public extension NetworkResponse {
 
 public extension NetworkCamerasResponse {
     init?(json: [String:Any]) {
-//        guard let authToken = json["authtoken"] as? [String: String] else {
-//            return nil
-//        }
-        
-//        self.authToken = AuthToken(token: authToken["authtoken"]!)
         cameras = []
+        guard let data = json["devicestatus"] as? [[String: Any]] else {
+            return nil
+        }
+        for cameraJson in data {
+            cameras.append(Camera(json: cameraJson)!)
+        }
     }
 }
 
