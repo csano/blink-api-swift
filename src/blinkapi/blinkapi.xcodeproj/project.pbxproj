@@ -7,15 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2612865F1F04DA1B00036AD6 /* networkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2612865E1F04DA1B00036AD6 /* networkTests.swift */; };
-		261286661F04DC8400036AD6 /* authTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261286651F04DC8400036AD6 /* authTokenTests.swift */; };
-		2612866A1F04E77000036AD6 /* authResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261286691F04E77000036AD6 /* authResponseTests.swift */; };
 		26A499A31EEC90DB0082B3D1 /* blinkapi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A499991EEC90DB0082B3D1 /* blinkapi.framework */; };
 		26F608DA1F31B8BE00A25BBC /* serviceMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F608D91F31B8BE00A25BBC /* serviceMediator.swift */; };
 		26F688DC1F82D295005AF3BB /* jsonHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688DB1F82D295005AF3BB /* jsonHelpers.swift */; };
-		26F688E01F82D6D4005AF3BB /* networkResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688DF1F82D6D4005AF3BB /* networkResponseTests.swift */; };
 		26F688E11F82D990005AF3BB /* jsonHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688DB1F82D295005AF3BB /* jsonHelpers.swift */; };
-		26F688E31F82E171005AF3BB /* networkCamerasResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688E21F82E171005AF3BB /* networkCamerasResponseTests.swift */; };
 		26F688E81F82E297005AF3BB /* networkCamerasResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688E51F82E297005AF3BB /* networkCamerasResponse.swift */; };
 		26F688E91F82E297005AF3BB /* authResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688E61F82E297005AF3BB /* authResponse.swift */; };
 		26F688EA1F82E297005AF3BB /* networkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688E71F82E297005AF3BB /* networkResponse.swift */; };
@@ -26,6 +21,11 @@
 		26F688F71F82E2BE005AF3BB /* blinkAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688F31F82E2BE005AF3BB /* blinkAccount.swift */; };
 		26F688F81F82E2BE005AF3BB /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688F41F82E2BE005AF3BB /* network.swift */; };
 		26F688F91F82E2BE005AF3BB /* authToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688F51F82E2BE005AF3BB /* authToken.swift */; };
+		26F689021F82E324005AF3BB /* authTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688FC1F82E324005AF3BB /* authTokenTests.swift */; };
+		26F689031F82E324005AF3BB /* networkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688FD1F82E324005AF3BB /* networkTests.swift */; };
+		26F689041F82E324005AF3BB /* authResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F688FF1F82E324005AF3BB /* authResponseTests.swift */; };
+		26F689051F82E324005AF3BB /* networkCamerasResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F689001F82E324005AF3BB /* networkCamerasResponseTests.swift */; };
+		26F689061F82E324005AF3BB /* networkResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F689011F82E324005AF3BB /* networkResponseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,17 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2612865E1F04DA1B00036AD6 /* networkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = networkTests.swift; sourceTree = "<group>"; };
-		261286651F04DC8400036AD6 /* authTokenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = authTokenTests.swift; sourceTree = "<group>"; };
-		261286691F04E77000036AD6 /* authResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = authResponseTests.swift; sourceTree = "<group>"; };
 		26A499991EEC90DB0082B3D1 /* blinkapi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = blinkapi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A4999D1EEC90DB0082B3D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26A499A21EEC90DB0082B3D1 /* blinkapiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blinkapiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A499A91EEC90DB0082B3D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26F608D91F31B8BE00A25BBC /* serviceMediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serviceMediator.swift; sourceTree = "<group>"; };
 		26F688DB1F82D295005AF3BB /* jsonHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jsonHelpers.swift; sourceTree = "<group>"; };
-		26F688DF1F82D6D4005AF3BB /* networkResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = networkResponseTests.swift; sourceTree = "<group>"; };
-		26F688E21F82E171005AF3BB /* networkCamerasResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = networkCamerasResponseTests.swift; sourceTree = "<group>"; };
 		26F688E51F82E297005AF3BB /* networkCamerasResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = networkCamerasResponse.swift; path = Responses/networkCamerasResponse.swift; sourceTree = "<group>"; };
 		26F688E61F82E297005AF3BB /* authResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = authResponse.swift; path = Responses/authResponse.swift; sourceTree = "<group>"; };
 		26F688E71F82E297005AF3BB /* networkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = networkResponse.swift; path = Responses/networkResponse.swift; sourceTree = "<group>"; };
@@ -60,6 +55,11 @@
 		26F688F31F82E2BE005AF3BB /* blinkAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = blinkAccount.swift; path = Data/blinkAccount.swift; sourceTree = "<group>"; };
 		26F688F41F82E2BE005AF3BB /* network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = network.swift; path = Data/network.swift; sourceTree = "<group>"; };
 		26F688F51F82E2BE005AF3BB /* authToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = authToken.swift; path = Data/authToken.swift; sourceTree = "<group>"; };
+		26F688FC1F82E324005AF3BB /* authTokenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = authTokenTests.swift; sourceTree = "<group>"; };
+		26F688FD1F82E324005AF3BB /* networkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = networkTests.swift; sourceTree = "<group>"; };
+		26F688FF1F82E324005AF3BB /* authResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = authResponseTests.swift; sourceTree = "<group>"; };
+		26F689001F82E324005AF3BB /* networkCamerasResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = networkCamerasResponseTests.swift; sourceTree = "<group>"; };
+		26F689011F82E324005AF3BB /* networkResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = networkResponseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,12 +126,9 @@
 		26A499A61EEC90DB0082B3D1 /* blinkapiTests */ = {
 			isa = PBXGroup;
 			children = (
+				26F688FB1F82E324005AF3BB /* Data */,
+				26F688FE1F82E324005AF3BB /* Responses */,
 				26A499A91EEC90DB0082B3D1 /* Info.plist */,
-				2612865E1F04DA1B00036AD6 /* networkTests.swift */,
-				261286651F04DC8400036AD6 /* authTokenTests.swift */,
-				261286691F04E77000036AD6 /* authResponseTests.swift */,
-				26F688DF1F82D6D4005AF3BB /* networkResponseTests.swift */,
-				26F688E21F82E171005AF3BB /* networkCamerasResponseTests.swift */,
 			);
 			path = blinkapiTests;
 			sourceTree = "<group>";
@@ -162,6 +159,25 @@
 				26F688EE1F82E2B3005AF3BB /* blinkProxy.swift */,
 			);
 			name = Proxies;
+			sourceTree = "<group>";
+		};
+		26F688FB1F82E324005AF3BB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				26F688FC1F82E324005AF3BB /* authTokenTests.swift */,
+				26F688FD1F82E324005AF3BB /* networkTests.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		26F688FE1F82E324005AF3BB /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				26F688FF1F82E324005AF3BB /* authResponseTests.swift */,
+				26F689001F82E324005AF3BB /* networkCamerasResponseTests.swift */,
+				26F689011F82E324005AF3BB /* networkResponseTests.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,12 +309,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26F688E01F82D6D4005AF3BB /* networkResponseTests.swift in Sources */,
+				26F689021F82E324005AF3BB /* authTokenTests.swift in Sources */,
+				26F689041F82E324005AF3BB /* authResponseTests.swift in Sources */,
+				26F689061F82E324005AF3BB /* networkResponseTests.swift in Sources */,
+				26F689031F82E324005AF3BB /* networkTests.swift in Sources */,
 				26F688E11F82D990005AF3BB /* jsonHelpers.swift in Sources */,
-				2612865F1F04DA1B00036AD6 /* networkTests.swift in Sources */,
-				261286661F04DC8400036AD6 /* authTokenTests.swift in Sources */,
-				2612866A1F04E77000036AD6 /* authResponseTests.swift in Sources */,
-				26F688E31F82E171005AF3BB /* networkCamerasResponseTests.swift in Sources */,
+				26F689051F82E324005AF3BB /* networkCamerasResponseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
