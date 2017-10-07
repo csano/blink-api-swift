@@ -25,7 +25,8 @@ public class NetworkProxy: BlinkProxy {
     }
     
     public func getCameras(authToken: AuthToken, network: Network, callback: @escaping (NetworkCamerasResponse) -> Void) -> Void {
-        let request = createRequest(url: createNetworkCollectionRequestUrl(networkId: network.id, collection: "cameras"))
+        var request = createRequest(url: createNetworkCollectionRequestUrl(networkId: network.id, collection: "cameras"))
+        request.setValue(authToken.token, forHTTPHeaderField: "TOKEN_AUTH")
         makeRequest(request: request, callback: { (data: [String: Any]) -> Void in
             callback(NetworkCamerasResponse(json: data)!)
         })
